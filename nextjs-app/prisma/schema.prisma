@@ -6,6 +6,17 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = env("DATABASE_URL")
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model User {
+  userId    Int      @id
+  email     String   @unique
+  firstName String
+  lastName  String
+  age       Int
+  plan      String
+  createdAt DateTime @unique @default(now())
 }
