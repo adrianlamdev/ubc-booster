@@ -1,0 +1,3 @@
+[submodule "ubc-grades-parser"]
+	path = ubc-grades-parser
+	url = https://github.com/adrianlamdev/ubc-grades-parser
