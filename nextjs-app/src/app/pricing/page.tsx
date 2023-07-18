@@ -1,10 +1,12 @@
+import Link from "next/link";
+
 export default function PricingPage() {
   return (
     <div className="p-12 lg:px-64">
       <div className="flex justify-center flex-col items-center">
-        <h1 className="text-indigo-500 font-semibold">Pricing</h1>
+        <h1 className="text-blue-500 font-semibold">Pricing</h1>
         <p className="mt-1 font-bold text-4xl">
-          Pricing plans for every budget.
+          Pricing plans for your needs.
         </p>
         <p className="mt-2 text-gray-600">This is the pricing page.</p>
       </div>
@@ -25,7 +27,7 @@ export default function PricingPage() {
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  className="w-5 h-5 mr-2 text-indigo-500"
+                  className="w-5 h-5 mr-2 text-blue-500"
                 >
                   <path
                     stroke-linecap="round"
@@ -42,7 +44,7 @@ export default function PricingPage() {
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  className="w-5 h-5 mr-2 text-indigo-500"
+                  className="w-5 h-5 mr-2 text-blue-500"
                 >
                   <path
                     stroke-linecap="round"
@@ -59,7 +61,7 @@ export default function PricingPage() {
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  className="w-5 h-5 mr-2 text-indigo-500"
+                  className="w-5 h-5 mr-2 text-blue-500"
                 >
                   <path
                     stroke-linecap="round"
@@ -72,7 +74,9 @@ export default function PricingPage() {
             </ul>
           </div>
           <button className="mt-20 border hover:border-blue-500 transition border-gray-300 text-blue-600 text-sm font-semibold py-2 px-4 rounded-lg">
-            Get Started
+            <Link href="/purchase/free">
+                Get Started
+            </Link>
           </button>
         </li>
         <li className="border-2 border-blue-500 rounded-3xl p-8 flex justify-center flex-col">
@@ -143,7 +147,9 @@ export default function PricingPage() {
             </ul>
           </div>
           <button className="mt-20 border hover:border-blue-500 transition border-gray-300 text-blue-600 text-sm font-semibold py-2 px-4 rounded-lg">
-            Get Started
+            <Link href="/purchase">
+                Get Started
+            </Link>
           </button>
         </li>
       </ul>
