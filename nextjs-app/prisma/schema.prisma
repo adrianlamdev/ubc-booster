@@ -11,7 +11,7 @@ datasource db {
   relationMode = "prisma"
 }
 
-model User {
+model Users {
   userId    Int      @id
   email     String   @unique
   firstName String
@@ -19,4 +19,40 @@ model User {
   age       Int
   plan      String
   createdAt DateTime @unique @default(now())
+}
+
+model Course {
+  id        Int         @id @default(autoincrement())
+  campus    String      @default("UBCV")
+  subject   String
+  course    Int
+  title     String
+  offerings Offerings[]
+}
+
+model Offerings {
+  id            Int    @id @default(autoincrement())
+  year          Int
+  term          String
+  section       String
+  professor     String
+  course        Course @relation(fields: [courseId], references: [id])
+  courseId      Int
+  enrolled      Int
+  avg           Float?
+  high          Float?
+  low           Float?
+  lessThan50    Float?
+  between50_54  Float?
+  between55_59  Float?
+  between60_63  Float?
+  between64_67  Float?
+  between68_71  Float?
+  between72_75  Float?
+  between76_79  Float?
+  between80_84  Float?
+  between85_89  Float?
+  between90_100 Float?
+
+  @@index([courseId])
 }
