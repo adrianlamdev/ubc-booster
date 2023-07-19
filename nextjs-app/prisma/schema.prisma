@@ -22,22 +22,22 @@ model Users {
 }
 
 model Course {
-  id        Int         @id @default(autoincrement())
-  campus    String      @default("UBCV")
-  subject   String
-  course    Int
-  title     String
-  offerings Offerings[]
+  id       Int    @id @default(autoincrement())
+  campus   String @default("UBCV")
+  subject  String
+  course   Int
+  courseId String @unique
+  title    String
+  // offering Offering[]
 }
 
-model Offerings {
-  id            Int    @id @default(autoincrement())
+model Offering {
+  id            Int     @id @default(autoincrement())
+  courseId      String
   year          Int
   term          String
   section       String
-  professor     String
-  course        Course @relation(fields: [courseId], references: [id])
-  courseId      Int
+  professor     String? @db.VarChar(1500)
   enrolled      Int
   avg           Float?
   high          Float?
