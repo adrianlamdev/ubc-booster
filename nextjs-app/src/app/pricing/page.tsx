@@ -5,9 +5,7 @@ export default function PricingPage() {
     <div className="p-12 lg:px-64">
       <div className="flex justify-center flex-col items-center">
         <h1 className="text-blue-500 font-semibold">Pricing</h1>
-        <p className="mt-1 font-bold text-4xl">
-          Pricing plans for your needs.
-        </p>
+        <p className="mt-1 font-bold text-4xl">Pricing plans for your needs.</p>
         <p className="mt-2 text-gray-600">This is the pricing page.</p>
       </div>
       <ul className="flex flex-row justify-center mt-20">
@@ -74,9 +72,7 @@ export default function PricingPage() {
             </ul>
           </div>
           <button className="mt-20 border hover:border-blue-500 transition border-gray-300 text-blue-600 text-sm font-semibold py-2 px-4 rounded-lg">
-            <Link href="/purchase/free">
-                Get Started
-            </Link>
+            <Link href="/purchase/free">Get Started</Link>
           </button>
         </li>
         <li className="border-2 border-blue-500 rounded-3xl p-8 flex justify-center flex-col">
@@ -147,9 +143,7 @@ export default function PricingPage() {
             </ul>
           </div>
           <button className="mt-20 border hover:border-blue-500 transition border-gray-300 text-blue-600 text-sm font-semibold py-2 px-4 rounded-lg">
-            <Link href="/purchase">
-                Get Started
-            </Link>
+            <Link href="/purchase">Get Started</Link>
           </button>
         </li>
       </ul>

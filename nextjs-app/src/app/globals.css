@@ -6,49 +6,49 @@
 }
 
 .hero-button svg {
-    transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
 .hero-button:hover svg {
-    transform: translateX(15px);
+  transform: translateX(15px);
 }
 
 .hero-button {
-    transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .custom-shape-divider-bottom-1689628893 {
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
 }
 
 .custom-shape-divider-bottom-1689628893 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 150px;
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
 }
 
 .custom-shape-divider-bottom-1689628893 .shape-fill {
-    fill: #0f172a;
+  fill: #0f172a;
 }
 
 .custom-shape-divider-bottom-1689753546 {
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
 }
 
 .custom-shape-divider-bottom-1689753546 svg {
-    position: relative;
-    display: block;
-    width: calc(135% + 1.3px);
-    height: 76px;
+  position: relative;
+  display: block;
+  width: calc(135% + 1.3px);
+  height: 76px;
 }
 
 .custom-shape-divider-bottom-1689753546 .shape-fill {
-    fill: #FFFFFF;
+  fill: #ffffff;
 }
