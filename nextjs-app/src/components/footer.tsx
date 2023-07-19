@@ -1,7 +1,7 @@
 "use client"
 
 import { Input } from "@nextui-org/react";
-import { useState } from "react";
+import { useState, ChangeEvent, FormEvent } from "react";
 
 export default function Footer() {
   const [emailPlaceholder, setEmailPlaceholder] = useState("johndoe@example.com")
@@ -11,7 +11,7 @@ export default function Footer() {
     setEmailPlaceholder("")
   }
 
-  const handleEmailSubmit = (event) => {
+  const handleEmailSubmit = (event : FormEvent) => {
     event.preventDefault(); // Prevent default form submission
 
     // Email validation logic
@@ -27,7 +27,7 @@ export default function Footer() {
     setEmailPlaceholder("johndoe@example.com");
   };
 
-  const handleEmailChange = (event) => {
+  const handleEmailChange = (event: ChangeEvent<HTMLInputElement>) => {
     setEmail(event.target.value);
     setErrorMessage("");
   };
