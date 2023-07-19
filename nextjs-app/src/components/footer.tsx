@@ -48,7 +48,7 @@ export default function Footer() {
           </path>
         </svg>
       </div>
-      <div className="lg:mx-64 my-32">
+      <div className="lg:mx-64 my-32 mx-10">
       <div className="flex justify-center">
         <div className="flex flex-col items-center">
           <h1 className="font-bold text-2xl lg:text-3xl">
