@@ -3,7 +3,7 @@
 import { Navbar, Text, Button, Link } from "@nextui-org/react";
 import AcademicCapIcon from "@heroicons/react/24/outline/AcademicCapIcon";
 
-const collapseItems = ["Features", "Pricing", "Help and Feedback"];
+const collapseItems = ["Home", "Features", "Pricing", "Help and Feedback"];
 
 export default function NavbarComp() {
   return (
@@ -12,18 +12,21 @@ export default function NavbarComp() {
       <Navbar variant="sticky">
         <Navbar.Brand>
           <Navbar.Toggle className="lg:hidden" aria-label="toggle navigation" />
-          <AcademicCapIcon className="mx-4 h-6 w-6 text-blue-800" />
-          <Text b color="inherit" hideIn="xs">
-            UBC Booster
-          </Text>
+          <Link href="/">
+            <AcademicCapIcon className="mx-4 h-6 w-6 text-blue-800" />
+            <Text b color="inherit" hideIn="xs">
+                UBC Booster
+            </Text>
+            </Link>
         </Navbar.Brand>
         <Navbar.Content activeColor="primary" hideIn="xs" variant="highlight">
-          <Navbar.Link href="#">Features</Navbar.Link>
-          <Navbar.Link isActive href="#">
-            Customers
+            <Navbar.Link isActive href="#">
+            Home
           </Navbar.Link>
+          <Navbar.Link href="#">Features</Navbar.Link>
+          
           <Navbar.Link href="#">Pricing</Navbar.Link>
-          <Navbar.Link href="#">Company</Navbar.Link>
+          <Navbar.Link href="#">FAQ</Navbar.Link>
         </Navbar.Content>
         <Navbar.Content>
           <Navbar.Link color="inherit" href="#">

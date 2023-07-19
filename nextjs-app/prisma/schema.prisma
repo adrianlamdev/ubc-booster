@@ -56,3 +56,9 @@ model Offering {
 
   @@index([courseId])
 }
+
+model EmailNewsSubscriber {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  createdAt DateTime @default(now())
+}

@@ -58,10 +58,9 @@ export default function Home() {
               We combine the latest AI technologies with fitness tracking to give you the best experience possible.
             </Text> */}
             <div className="mt-4 flex flex-row">
+            <Link href="/sign-up" className="text-white">
               <button className="hover:pr-6 hero-button mr-4 flex-row hover:bg-blue-400 bg-blue-500 border-blue-600 border transition px-3 py-1 rounded-2xl flex items-center justify-center">
-                <Link href="/sign-up" className="text-white">
                   Get Started
-                </Link>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -77,10 +76,11 @@ export default function Home() {
                   />
                 </svg>
               </button>
+              </Link>
+              <Link href="/help-and-feedback" className="text-blue-500">
+
               <button className="hover:pr-6 duration-300 hero-button flex-row hover:border-blue-500 border-gray-300 border-2 transition px-3 py-1 rounded-2xl flex items-center justify-center">
-                <Link href="/help-and-feedback" className="text-blue-500">
                   FAQ
-                </Link>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -96,6 +96,7 @@ export default function Home() {
                   />
                 </svg>
               </button>
+              </Link>
             </div>
           </div>
           <div>image</div>
@@ -111,7 +112,9 @@ export default function Home() {
           <path
             d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
             className="shape-fill"
-          ></path>
+          >
+            
+          </path>
         </svg>
       </div>
       <Features />
