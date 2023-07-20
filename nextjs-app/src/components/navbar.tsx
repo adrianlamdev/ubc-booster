@@ -20,13 +20,13 @@ export default function NavbarComp() {
           </Link>
         </Navbar.Brand>
         <Navbar.Content activeColor="primary" hideIn="xs" variant="highlight">
-          <Navbar.Link isActive href="#">
+          <Navbar.Link isActive href="/">
             Home
           </Navbar.Link>
-          <Navbar.Link href="#">Features</Navbar.Link>
+          <Navbar.Link href="/">Features</Navbar.Link>
 
-          <Navbar.Link href="#">Pricing</Navbar.Link>
-          <Navbar.Link href="#">FAQ</Navbar.Link>
+          <Navbar.Link href="/pricing">Pricing</Navbar.Link>
+          <Navbar.Link href="/help-and-feedback">FAQ</Navbar.Link>
         </Navbar.Content>
         <Navbar.Content>
           <Navbar.Link color="inherit" href="#">

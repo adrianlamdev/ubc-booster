@@ -42,7 +42,7 @@ export default function Home() {
             <h1 className="text-4xl lg:text-6xl font-bold tracking-tight">
               essentials in one place.
             </h1>
-            <Spacer y={0.5} />
+            <Spacer y={1} />
             <p className="lg:text-lg w-3/4 tracking-tighter">
               We combine the latest AI technologies with fitness tracking to
               give you the best experience possible.
