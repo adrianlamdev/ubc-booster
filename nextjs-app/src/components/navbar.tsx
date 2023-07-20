@@ -15,16 +15,16 @@ export default function NavbarComp() {
           <Link href="/">
             <AcademicCapIcon className="mx-4 h-6 w-6 text-blue-800" />
             <Text b color="inherit" hideIn="xs">
-                UBC Booster
+              UBC Booster
             </Text>
-            </Link>
+          </Link>
         </Navbar.Brand>
         <Navbar.Content activeColor="primary" hideIn="xs" variant="highlight">
-            <Navbar.Link isActive href="#">
+          <Navbar.Link isActive href="#">
             Home
           </Navbar.Link>
           <Navbar.Link href="#">Features</Navbar.Link>
-          
+
           <Navbar.Link href="#">Pricing</Navbar.Link>
           <Navbar.Link href="#">FAQ</Navbar.Link>
         </Navbar.Content>
