@@ -23,7 +23,7 @@ const features = [
 
 export default function Features() {
   return (
-    <div className="bg-slate-900 min-h-screen py-32 lg:px-64 px-10">
+    <div className="bg-slate-900 py-32 lg:px-64 px-10">
       <div className="flex flex-col">
         <h1 className="text-white font-bold text-3xl lg:text-5xl">Features</h1>
         <p className="mt-2 text-gray-400 lg:text-lg">

@@ -113,6 +113,11 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      <div className="mb-10">
+        <p className="text-center">
+        Made with ❤️ by the <span className="text-blue-500 font-semibold">UBC Booster</span> team.
+        </p>
+      </div>
     </div>
   );
 }
