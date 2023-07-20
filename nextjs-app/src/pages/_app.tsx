@@ -5,9 +5,9 @@ import type { AppProps } from "next/app";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     // 2. Use at the root of your app
-      <NextUIProvider>
-        <Component {...pageProps} />
-      </NextUIProvider>
+    <NextUIProvider>
+      <Component {...pageProps} />
+    </NextUIProvider>
   );
 }
 

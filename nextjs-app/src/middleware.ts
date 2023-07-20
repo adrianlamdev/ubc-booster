@@ -5,10 +5,16 @@ import { NextRequest } from "next/server";
 // Please edit this to allow other routes to be public as needed.
 // See https://clerk.com/docs/nextjs/middleware for more information about configuring your middleware
 export default authMiddleware({
-  publicRoutes: ["/", "/sign-in", "/sign-up", "/pricing", "/help-and-feedback",
-"/api", "/api/subscribe"],
-
-  });
+  publicRoutes: [
+    "/",
+    "/sign-in",
+    "/sign-up",
+    "/pricing",
+    "/help-and-feedback",
+    "/api",
+    "/api/subscribe",
+  ],
+});
 
 export const config = {
   matcher: ["/((?!.*\\..*|_next).*)", "/", "/(api|trpc)(.*)"],

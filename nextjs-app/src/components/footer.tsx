@@ -17,14 +17,14 @@ export default function Footer() {
   };
 
   const handleEmailSubmit = (event: FormEvent) => {
-    setLoading(true)
+    setLoading(true);
     event.preventDefault(); // Prevent default form submission
 
     // Email validation logic
     const emailRegex = /^\S+@\S+\.\S+$/;
     if (!emailRegex.test(email)) {
       setErrorMessage("Please enter a valid email address.");
-      setLoading(false)
+      setLoading(false);
       return;
     }
 
@@ -34,17 +34,20 @@ export default function Footer() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ email }),
-    }).then((response) => {
-      response.json().then((data) => {
-        console.log(data);
+    })
+      .then((response) => {
+        response.json().then((data) => {
+          console.log(data);
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+      .finally(() => {
+        setLoading(false); // Reset the loading state
       });
-    }).catch((error) => {
-      console.log(error);
-    }).finally(() => {
-      setLoading(false); // Reset the loading state
-    });
 
-    // Email is valid, proceed with submission    
+    // Email is valid, proceed with submission
     setEmail("");
     setEmailPlaceholder("johndoe@example.com");
   };
@@ -94,19 +97,18 @@ export default function Footer() {
                     placeholder={emailPlaceholder}
                   />
                   <div className="md:hidden">
-                  <p className="text-rose-500 mt-1">{errorMessage}</p>
-
+                    <p className="text-rose-500 mt-1">{errorMessage}</p>
                   </div>
                   <button
                     type="submit"
                     onClick={handleEmailSubmit}
                     className="w-20 h-10 mt-4 lg:mt-0 text-blue-500 ml-4 duration-300 hero-button flex-row hover:border-blue-500 border-gray-300 border-2 transition px-3 py-1 rounded-2xl flex items-center justify-center"
                   >
-                    {loading ? <Loading size="xs" /> : 'Submit'}
+                    {loading ? <Loading size="xs" /> : "Submit"}
                   </button>
                 </div>
                 <div className="hidden lg:flex">
-                <p className="ml-2 text-rose-500 mt-1">{errorMessage}</p>
+                  <p className="ml-2 text-rose-500 mt-1">{errorMessage}</p>
                 </div>
               </div>
             </form>
@@ -115,7 +117,8 @@ export default function Footer() {
       </div>
       <div className="mb-10">
         <p className="text-center">
-        Made with ❤️ by the <span className="text-blue-500 font-semibold">UBC Booster</span> team.
+          Made with ❤️ by the{" "}
+          <span className="text-blue-500 font-semibold">UBC Booster</span> team.
         </p>
       </div>
     </div>

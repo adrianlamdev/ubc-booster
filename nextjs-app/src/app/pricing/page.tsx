@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Link from "next/link";
 import { Spacer } from "@nextui-org/react";
@@ -10,7 +10,9 @@ export default function PricingPage() {
         <h1 className="text-blue-500 font-semibold">Pricing</h1>
         <p className="mt-1 font-bold text-4xl">Pricing plans for your needs.</p>
         <Spacer y={1} />
-        <p className="text-gray-600">What are you waiting for? It's time to get started.</p>
+        <p className="text-gray-600">
+          What are you waiting for? It's time to get started.
+        </p>
       </div>
       <Spacer y={4} />
       <ul className="flex flex-row justify-center">
