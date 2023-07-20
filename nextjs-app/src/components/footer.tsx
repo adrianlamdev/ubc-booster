@@ -1,6 +1,7 @@
 "use client";
 
 import { Input } from "@nextui-org/react";
+import { Loading } from "@nextui-org/react";
 import { useState, ChangeEvent, FormEvent } from "react";
 
 export default function Footer() {
@@ -9,22 +10,41 @@ export default function Footer() {
   );
   const [email, setEmail] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+
   const handleEmailFocusClick = () => {
     setEmailPlaceholder("");
   };
 
   const handleEmailSubmit = (event: FormEvent) => {
+    setLoading(true)
     event.preventDefault(); // Prevent default form submission
 
     // Email validation logic
     const emailRegex = /^\S+@\S+\.\S+$/;
     if (!emailRegex.test(email)) {
       setErrorMessage("Please enter a valid email address.");
+      setLoading(false)
       return;
     }
 
-    // Email is valid, proceed with submission
-    console.log(email);
+    fetch("/api/subscribe", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email }),
+    }).then((response) => {
+      response.json().then((data) => {
+        console.log(data);
+      });
+    }).catch((error) => {
+      console.log(error);
+    }).finally(() => {
+      setLoading(false); // Reset the loading state
+    });
+
+    // Email is valid, proceed with submission    
     setEmail("");
     setEmailPlaceholder("johndoe@example.com");
   };
@@ -73,29 +93,21 @@ export default function Footer() {
                     type="text"
                     placeholder={emailPlaceholder}
                   />
+                  <div className="md:hidden">
+                  <p className="text-rose-500 mt-1">{errorMessage}</p>
+
+                  </div>
                   <button
                     type="submit"
                     onClick={handleEmailSubmit}
-                    className="mt-4 lg:mt-0 text-blue-500 ml-4 hover:pr-6 duration-300 hero-button flex-row hover:border-blue-500 border-gray-300 border-2 transition px-3 py-1 rounded-2xl flex items-center justify-center"
+                    className="w-20 h-10 mt-4 lg:mt-0 text-blue-500 ml-4 duration-300 hero-button flex-row hover:border-blue-500 border-gray-300 border-2 transition px-3 py-1 rounded-2xl flex items-center justify-center"
                   >
-                    Submit
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      className="ml-1 w-5 h-auto text-blue-500"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
-                      />
-                    </svg>
+                    {loading ? <Loading size="xs" /> : 'Submit'}
                   </button>
                 </div>
+                <div className="hidden lg:flex">
                 <p className="ml-2 text-rose-500 mt-1">{errorMessage}</p>
+                </div>
               </div>
             </form>
           </div>
