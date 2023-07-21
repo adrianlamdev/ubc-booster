@@ -40,7 +40,7 @@ export default function PricingPage() {
                     d="M4.5 12.75l6 6 9-13.5"
                   />
                 </svg>
-                <p className="text-sm">Feature 1</p>
+                <p className="text-sm">4 GPA boosters</p>
               </li>
               <li className="flex flex-row items-center mt-4">
                 <svg
@@ -92,7 +92,7 @@ export default function PricingPage() {
             </div>
             <p className="mt-4">Essentials to get started.</p>
             <h2 className="font-bold text-3xl mt-4">
-              $0
+              $4
               <span className="font-medium text-sm text-gray-600">/month</span>
             </h2>
             <ul className="mt-6">
@@ -111,7 +111,7 @@ export default function PricingPage() {
                     d="M4.5 12.75l6 6 9-13.5"
                   />
                 </svg>
-                <p className="text-sm">Feature 1</p>
+                <p className="text-sm">Entire directory of GPA boosters</p>
               </li>
               <li className="flex flex-row items-center mt-4">
                 <svg
@@ -128,7 +128,7 @@ export default function PricingPage() {
                     d="M4.5 12.75l6 6 9-13.5"
                   />
                 </svg>
-                <p className="text-sm">Feature 2</p>
+                <p className="text-sm">Get notifications for course registration</p>
               </li>
               <li className="flex flex-row items-center mt-4">
                 <svg

@@ -1,6 +1,6 @@
 "use client";
 
-import { Collapse, Spacer, Link } from "@nextui-org/react";
+import { Collapse, Spacer, Link, Button } from "@nextui-org/react";
 import Image from "next/image";
 
 export default function HelpFeedbackPage() {
@@ -85,8 +85,7 @@ export default function HelpFeedbackPage() {
         </h1>
         <Spacer y={1} />
         <p className="lg:text-lg text-gray-400">
-          Have any questions, feedback, or suggestions? Feel free to contact us
-          using the form below.
+          Have any questions, feedback, or suggestions?
         </p>
         <Spacer y={1} />
         <div className="flex justify-center lg:flex-row lg:items-center lg:justify-between">
@@ -134,7 +133,7 @@ export default function HelpFeedbackPage() {
               </div>
             </div>
             <Spacer y={1} />
-            <button className="rounded-md bg-blue-500 text-white px-4 py-2">
+            <button className="rounded-md bg-blue-600 hover:bg-blue-500 transition text-white px-4 py-2">
               Submit
             </button>
           </form>

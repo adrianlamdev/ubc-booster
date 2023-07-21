@@ -36,7 +36,6 @@ export default function Home() {
 
   return (
     <main className="flex flex-col justify-between">
-      <DisclaimerModal />
       <div className="m-10 lg:m-64">
         <div className="flex justify-between items-center">
           <div className="">
