@@ -57,7 +57,7 @@ export default function HelpFeedbackPage() {
               <Link isExternal href="https://vercel.com/">
                 Vercel
               </Link>
-              , <Link href="https://prisma.io/">Prisma</Link>, and{" "}
+              , <Link isExternal href="https://prisma.io/">Prisma</Link>, and{" "}
               <Link isExternal href="https://clerk.dev">
                 Clerk
               </Link>

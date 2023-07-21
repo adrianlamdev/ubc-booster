@@ -1,10 +1,11 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Features from "../components/features";
 import StatSection from "../components/stats";
 import { Text, Spacer } from "@nextui-org/react";
 import { Modal, Input, Row, Checkbox, Button } from "@nextui-org/react";
+import { motion, AnimatePresence } from "framer-motion";
 import DisclaimerModal from "@/components/disclamer";
 
 export default function Home() {
@@ -33,6 +34,15 @@ export default function Home() {
   //   // Call the getCourses function to initiate the data retrieval
   //   getCourses();
   // }, []);
+  const [index, setIndex] = useState(0);
+  const phrases = ["Jump in.", "Stay ahead.", "Excel with ease."];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % phrases.length);
+    }, 3000); // Change phrase every 3 seconds
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <main className="flex flex-col justify-between">
@@ -46,9 +56,12 @@ export default function Home() {
               essentials in one place.
             </h1>
             <Spacer y={1} />
-            <p className="lg:text-lg w-3/4 tracking-tighter">
-              We combine the latest AI technologies with fitness tracking to
-              give you the best experience possible.
+            <p className="lg:text-lg tracking-tighter">
+            Get real-time notifications on courses, and discover GPA boosters
+            <p>
+            to take your academic performance to the next level. 
+            </p>
+            Jump in. Stay ahead. Excel with ease.
             </p>
             {/* <Text h1 weight="bold" size="$6xl" className="tracking-tight">
               Your <span className="text-blue-500">UBC</span> course
@@ -101,8 +114,27 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div>image</div>
+          <div>
+        IMAGE
+      </div>
         </div>
+      </div>
+      <div className="flex items-center justify-center">
+        <AnimatePresence mode="wait">
+          <motion.h1
+            key={phrases[index]}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.4 }} // You can adjust the duration as needed
+            className="text-3xl lg:text-5xl font-bold transition"
+          >
+            {phrases[index]}
+          </motion.h1>
+        </AnimatePresence>
+      </div>
+      <div className="lg:hidden">
+      <Spacer y={2} />
       </div>
       <div className="custom-shape-divider-bottom-1689628893">
         <svg

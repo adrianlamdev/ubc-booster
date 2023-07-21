@@ -12,11 +12,9 @@ import {
   Link,
 } from "@nextui-org/react";
 
-export default function DisclaimerModal() {
-  const [visible, setVisible] = useState(true);
-  const handler = () => setVisible(true);
+export default function DisclaimerModal({ isOpen, onClose }) {
   const closeHandler = () => {
-    setVisible(false);
+    onClose();
     console.log("closed");
   };
   return (
@@ -25,7 +23,7 @@ export default function DisclaimerModal() {
         closeButton
         blur
         aria-labelledby="modal-title"
-        open={visible}
+        open={isOpen}
         onClose={closeHandler}
       >
         <Modal.Header>
@@ -50,7 +48,7 @@ export default function DisclaimerModal() {
             .
           </Text>
           <Text>
-            This website will remain relevant to UBC Vancouver students only.
+            This website was made for UBC Vancouver students only, and will remain relevant to UBC Vancouver students only.
           </Text>
         </Modal.Body>
         <Modal.Footer>
