@@ -84,7 +84,9 @@ export default function NavbarComp() {
                 description="Get notifications for certain courses by text or email."
                 icon={icons.scale}
               >
+                <Link color="text" href="/tools/course-notifier">
                 Course Notifier
+                </Link>
               </Dropdown.Item>
               <Dropdown.Item
                 key="gpa_list"
@@ -92,7 +94,9 @@ export default function NavbarComp() {
                 description="Get a yearly updated list of GPA boosters at UBC. "
                 icon={icons.activity}
               >
-                List of GPA Boosters
+                <Link color="text" href="/tools/gpa-boosters">
+                    List of GPA Boosters
+                </Link>
               </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>

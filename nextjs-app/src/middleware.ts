@@ -13,7 +13,9 @@ export default authMiddleware({
     "/help-and-feedback",
     "/api",
     "/api/subscribe",
-    "/tools"
+    "/tools",
+    "/tools/course-notifier",
+    "/tools/gpa-boosters",
   ],
 });
 

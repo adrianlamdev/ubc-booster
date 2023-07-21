@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import Link from "next/link";
 import Features from "../components/features";
 import { Text, Spacer } from "@nextui-org/react";
+import { Modal, Input, Row, Checkbox, Button } from "@nextui-org/react";
+import DisclaimerModal from "@/components/disclamer";
 
 export default function Home() {
   // Perform an action when the component mounts
@@ -33,6 +35,7 @@ export default function Home() {
 
   return (
     <main className="flex flex-col justify-between">
+      <DisclaimerModal />
       <div className="m-10 lg:m-64">
         <div className="flex justify-between items-center">
           <div className="">
