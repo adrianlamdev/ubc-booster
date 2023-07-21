@@ -5,7 +5,7 @@ import Features from "../components/features";
 import StatSection from "../components/stats";
 import { Text, Spacer } from "@nextui-org/react";
 import { Modal, Input, Row, Checkbox, Button } from "@nextui-org/react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useScroll } from "framer-motion";
 // import DisclaimerModal from "@/components/disclamer";
 
 export default function Home() {
