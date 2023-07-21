@@ -3,7 +3,7 @@
 import { Navbar, Text, Button, Link, Dropdown } from "@nextui-org/react";
 import AcademicCapIcon from "@heroicons/react/24/outline/AcademicCapIcon";
 import ChevronDownIcon from "@heroicons/react/24/outline/ChevronDownIcon";
-import { icons } from "./icons"
+import { icons } from "./icons";
 
 const collapseItems = [
   {
@@ -22,7 +22,7 @@ const collapseItems = [
     title: "Help and Feedback",
     href: "/help-and-feedback",
   },
-];  
+];
 
 export default function NavbarComp() {
   return (
@@ -38,7 +38,12 @@ export default function NavbarComp() {
             </Text>
           </Link>
         </Navbar.Brand>
-        <Navbar.Content activeColor="primary" hideIn="xs" variant="underline" enableCursorHighlight>
+        <Navbar.Content
+          activeColor="primary"
+          hideIn="xs"
+          variant="underline"
+          enableCursorHighlight
+        >
           <Navbar.Link isActive href="/">
             Home
           </Navbar.Link>
@@ -85,7 +90,7 @@ export default function NavbarComp() {
                 icon={icons.scale}
               >
                 <Link color="text" href="/tools/course-notifier">
-                Course Notifier
+                  Course Notifier
                 </Link>
               </Dropdown.Item>
               <Dropdown.Item
@@ -95,7 +100,7 @@ export default function NavbarComp() {
                 icon={icons.activity}
               >
                 <Link color="text" href="/tools/gpa-boosters">
-                    List of GPA Boosters
+                  List of GPA Boosters
                 </Link>
               </Dropdown.Item>
             </Dropdown.Menu>

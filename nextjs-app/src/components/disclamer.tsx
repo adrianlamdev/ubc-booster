@@ -1,8 +1,16 @@
-"use client"
+"use client";
 
 import React from "react";
 import { useState } from "react";
-import { Modal, Input, Row, Checkbox, Button, Text, Link } from "@nextui-org/react";
+import {
+  Modal,
+  Input,
+  Row,
+  Checkbox,
+  Button,
+  Text,
+  Link,
+} from "@nextui-org/react";
 
 export default function DisclaimerModal() {
   const [visible, setVisible] = useState(true);
@@ -24,18 +32,26 @@ export default function DisclaimerModal() {
           <Text id="modal-title" size={18}>
             Welcome to <span> </span>
             <Text b size={18}>
-            UBC Booster
+              UBC Booster
             </Text>
             !
           </Text>
         </Modal.Header>
         <Modal.Body>
-            <Text>
-                This website is not affiliated with the <Link isExternal href="https://www.ubc.ca/">UBC</Link> nor <Link isExternal href="https://ubcgrades.com/">UBC Grades</Link>. 
-            </Text>
-            <Text>
-                This website will remain relevant to UBC Vancouver students only.
-            </Text>
+          <Text>
+            This website is not affiliated with the{" "}
+            <Link isExternal href="https://www.ubc.ca/">
+              UBC
+            </Link>{" "}
+            nor{" "}
+            <Link isExternal href="https://ubcgrades.com/">
+              UBC Grades
+            </Link>
+            .
+          </Text>
+          <Text>
+            This website will remain relevant to UBC Vancouver students only.
+          </Text>
         </Modal.Body>
         <Modal.Footer>
           <Button auto onPress={closeHandler}>

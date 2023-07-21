@@ -1,6 +1,17 @@
 import React from "react";
 
-const ChevronDownIcon = ({ fill, size, width = 24, height = 24, ...props }: { fill: string; size?: number; width?: number; height?: number }) => {
+const ChevronDownIcon = ({
+  fill,
+  size,
+  width = 24,
+  height = 24,
+  ...props
+}: {
+  fill: string;
+  size?: number;
+  width?: number;
+  height?: number;
+}) => {
   return (
     <svg
       fill="none"
@@ -22,7 +33,18 @@ const ChevronDownIcon = ({ fill, size, width = 24, height = 24, ...props }: { fi
   );
 };
 
-const TagUserIcon = ({ fill, size, width = 24, height = 24, ...props }: { fill: string; size?: number; width?: number; height?: number }) => {
+const TagUserIcon = ({
+  fill,
+  size,
+  width = 24,
+  height = 24,
+  ...props
+}: {
+  fill: string;
+  size?: number;
+  width?: number;
+  height?: number;
+}) => {
   return (
     <svg
       fill="none"
@@ -51,7 +73,18 @@ const TagUserIcon = ({ fill, size, width = 24, height = 24, ...props }: { fill: 
   );
 };
 
-const ServerIcon = ({ fill, size, width = 24, height = 24, ...props }: { fill: string; size?: number; width?: number; height?: number }) => {
+const ServerIcon = ({
+  fill,
+  size,
+  width = 24,
+  height = 24,
+  ...props
+}: {
+  fill: string;
+  size?: number;
+  width?: number;
+  height?: number;
+}) => {
   return (
     <svg
       fill="none"
@@ -72,7 +105,18 @@ const ServerIcon = ({ fill, size, width = 24, height = 24, ...props }: { fill: s
   );
 };
 
-const FlashIcon = ({ fill, size, width = 24, height = 24, ...props }: { fill: string; size?: number; width?: number; height?: number }) => {
+const FlashIcon = ({
+  fill,
+  size,
+  width = 24,
+  height = 24,
+  ...props
+}: {
+  fill: string;
+  size?: number;
+  width?: number;
+  height?: number;
+}) => {
   return (
     <svg
       fill="none"
@@ -94,7 +138,18 @@ const FlashIcon = ({ fill, size, width = 24, height = 24, ...props }: { fill: st
   );
 };
 
-const ActivityIcon = ({ fill, size, width = 24, height = 24, ...props }: { fill: string; size?: number; width?: number; height?: number }) => {
+const ActivityIcon = ({
+  fill,
+  size,
+  width = 24,
+  height = 24,
+  ...props
+}: {
+  fill: string;
+  size?: number;
+  width?: number;
+  height?: number;
+}) => {
   return (
     <svg
       data-name="Iconly/Curved/Activity"
@@ -120,7 +175,18 @@ const ActivityIcon = ({ fill, size, width = 24, height = 24, ...props }: { fill:
   );
 };
 
-const ScaleIcon = ({ fill, size, width = 24, height = 24, ...props }: { fill: string; size?: number; width?: number; height?: number }) => {
+const ScaleIcon = ({
+  fill,
+  size,
+  width = 24,
+  height = 24,
+  ...props
+}: {
+  fill: string;
+  size?: number;
+  width?: number;
+  height?: number;
+}) => {
   return (
     <svg
       fill="none"
@@ -156,4 +222,3 @@ export const icons = {
   server: <ServerIcon fill="var(--nextui-colors-success)" size={30} />,
   user: <TagUserIcon fill="var(--nextui-colors-error)" size={30} />,
 };
-

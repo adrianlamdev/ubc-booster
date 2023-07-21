@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import Link from "next/link";
 import Features from "../components/features";
+import StatSection from "../components/stats";
 import { Text, Spacer } from "@nextui-org/react";
 import { Modal, Input, Row, Checkbox, Button } from "@nextui-org/react";
 import DisclaimerModal from "@/components/disclamer";
@@ -118,6 +119,7 @@ export default function Home() {
         </svg>
       </div>
       <Features />
+      <StatSection />
     </main>
   );
 }
