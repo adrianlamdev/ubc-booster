@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
-import DisclaimerModal from "../components/disclamer"
+// import DisclaimerModal from "../components/disclamer"
 
 const inter = Inter({ subsets: ["latin"] });
 
