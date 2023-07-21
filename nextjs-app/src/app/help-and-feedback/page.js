@@ -16,8 +16,8 @@ export default function HelpFeedbackPage() {
         <Collapse.Group className="mt-4">
           <Collapse title="Are you affiliated with UBC or UBC Grades?">
             <p>
-              No, we are not affiliated with UBC or UBC Grades. Check out UBC
-              Grades{" "}
+              No, we are not affiliated with UBC or UBC Grades. We actively support UBC
+              Grades which can be found{" "}
               <Link isExternal href="https://ubcgrades.com">
                 here
               </Link>

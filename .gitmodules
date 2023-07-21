@@ -1,3 +1,6 @@
 [submodule "ubc-grades-parser"]
 	path = ubc-grades-parser
 	url = https://github.com/adrianlamdev/ubc-grades-parser
+[submodule "ubc-course-checker"]
+	path = ubc-course-checker
+	url = https://github.com/adrianlamdev/ubc-course-checker

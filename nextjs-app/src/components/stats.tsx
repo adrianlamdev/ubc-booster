@@ -29,7 +29,7 @@ export default function StatSection() {
       <Spacer y={1} />{" "}
       <ul className="flex flex-row justify-center ">
         <li className="lg:mr-40">
-            <h1 className="text-center font-bold text-2xl lg:text-4xl transition hover:text-blue-500">
+            <h1 className="text-center font-bold text-2xl lg:text-4xl transition text-blue-500">
                 1,409
             </h1>
             <Spacer y={0.5} />
@@ -38,7 +38,7 @@ export default function StatSection() {
             </p>
         </li>
         <li>
-        <h1 className="text-center font-bold text-2xl lg:text-4xl transition hover:text-blue-500">
+        <h1 className="text-center font-bold text-2xl lg:text-4xl transition text-blue-500">
                 1,755 
             </h1>
             <Spacer y={0.5} />
@@ -52,7 +52,7 @@ export default function StatSection() {
       <Spacer y={2} />{" "}
         <ul className="flex flex-row justify-between lg:mx-32">
         <li className="">
-            <h1 className="text-center font-bold text-2xl lg:text-4xl transition hover:text-blue-500">
+            <h1 className="text-center font-bold text-2xl lg:text-4xl transition text-blue-500">
                 109
             </h1>
             <Spacer y={0.5} />
@@ -61,7 +61,7 @@ export default function StatSection() {
             </p>
         </li>
         <li>
-        <h1 className="text-center font-bold text-2xl lg:text-4xl transition hover:text-blue-500">
+        <h1 className="text-center font-bold text-2xl lg:text-4xl transition text-blue-500">
                 140
             </h1>
             <Spacer y={0.5} />
@@ -69,7 +69,7 @@ export default function StatSection() {
                 200-level courses
             </p></li>
             <li className="">
-            <h1 className="text-center font-bold text-2xl lg:text-4xl transition hover:text-blue-500">
+            <h1 className="text-center font-bold text-2xl lg:text-4xl transition text-blue-500">
                 431
             </h1>
             <Spacer y={0.5} />
@@ -78,7 +78,7 @@ export default function StatSection() {
             </p>
         </li>
         <li>
-        <h1 className="text-center font-bold text-2xl lg:text-4xl transition hover:text-blue-500">
+        <h1 className="text-center font-bold text-2xl lg:text-4xl transition text-blue-500">
                 729
             </h1>
             <Spacer y={0.5} />
