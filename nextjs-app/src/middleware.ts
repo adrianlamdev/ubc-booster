@@ -13,6 +13,7 @@ export default authMiddleware({
     "/help-and-feedback",
     "/api",
     "/api/subscribe",
+    "/tools"
   ],
 });
 

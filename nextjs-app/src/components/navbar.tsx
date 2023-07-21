@@ -2,6 +2,8 @@
 
 import { Navbar, Text, Button, Link, Dropdown } from "@nextui-org/react";
 import AcademicCapIcon from "@heroicons/react/24/outline/AcademicCapIcon";
+import ChevronDownIcon from "@heroicons/react/24/outline/ChevronDownIcon";
+import { icons } from "./icons"
 
 const collapseItems = [
   {
@@ -20,13 +22,13 @@ const collapseItems = [
     title: "Help and Feedback",
     href: "/help-and-feedback",
   },
-];
+];  
 
 export default function NavbarComp() {
   return (
     <div>
       {/* <Navbar isBordered={isDark} variant="sticky"> */}
-      <Navbar variant="sticky">
+      <Navbar isBordered variant="sticky">
         <Navbar.Brand>
           <Navbar.Toggle className="lg:hidden" aria-label="toggle navigation" />
           <Link href="/">
@@ -36,13 +38,23 @@ export default function NavbarComp() {
             </Text>
           </Link>
         </Navbar.Brand>
-        <Navbar.Content activeColor="primary" hideIn="xs" variant="highlight">
+        <Navbar.Content activeColor="primary" hideIn="xs" variant="underline" enableCursorHighlight>
           <Navbar.Link isActive href="/">
             Home
           </Navbar.Link>
           <Dropdown isBordered>
             <Navbar.Item>
-              <Dropdown.Button auto light ripple={false}>
+              <Dropdown.Button
+                auto
+                light
+                css={{
+                  px: 0,
+                  dflex: "center",
+                  svg: { pe: "none" },
+                }}
+                ripple={false}
+                iconRight={icons.chevron}
+              >
                 Tools
               </Dropdown.Button>
             </Navbar.Item>
@@ -67,44 +79,20 @@ export default function NavbarComp() {
               }}
             >
               <Dropdown.Item
-                key="autoscaling"
+                key="course_notifier"
                 showFullDescription
-                description="ACME scales apps to meet user demand, automagically, based on load."
-                // icon={icons.scale}
+                description="Get notifications for certain courses by text or email."
+                icon={icons.scale}
               >
-                Autoscaling
+                Course Notifier
               </Dropdown.Item>
               <Dropdown.Item
-                key="usage_metrics"
+                key="gpa_list"
                 showFullDescription
-                description="Real-time metrics to debug issues. Slow query added? We’ll show you exactly where."
-                // icon={icons.activity}
+                description="Get a yearly updated list of GPA boosters at UBC. "
+                icon={icons.activity}
               >
-                Usage Metrics
-              </Dropdown.Item>
-              <Dropdown.Item
-                key="production_ready"
-                showFullDescription
-                description="ACME runs on ACME, join us and others serving requests at web scale."
-                // icon={icons.flash}
-              >
-                Production Ready
-              </Dropdown.Item>
-              <Dropdown.Item
-                key="99_uptime"
-                showFullDescription
-                description="Applications stay on the grid with high availability and high uptime guarantees."
-                // icon={icons.server}
-              >
-                +99% Uptime
-              </Dropdown.Item>
-              <Dropdown.Item
-                key="supreme_support"
-                showFullDescription
-                description="Overcome any challenge with a supporting team ready to respond."
-                // icon={icons.user}
-              >
-                +Supreme Support
+                List of GPA Boosters
               </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
