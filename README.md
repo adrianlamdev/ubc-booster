@@ -13,3 +13,6 @@
       - **LOOK INTO JWT TOKENS**
         - [JWT Intro](https://jwt.io/introduction/)
         - [More JWT stuff](https://www.howtogeek.com/devops/what-are-json-web-tokens-jwts-why-do-apis-use-them/#:~:text=JWTs%20are%20frequently%20used%20for%20API%20authentication%20because,token%20is%20signed%20using%20the%20server%27s%20secret%20key)
+
+- Possible features
+  - [Show course info](https://ubcexplorer.io/api)

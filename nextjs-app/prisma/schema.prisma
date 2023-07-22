@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -28,7 +25,6 @@ model Course {
   course   Int
   courseId String @unique
   title    String
-  // offering Offering[]
 }
 
 model Offering {
@@ -60,5 +56,22 @@ model Offering {
 model EmailNewsSubscriber {
   id        Int      @id @default(autoincrement())
   email     String   @unique
+  createdAt DateTime @default(now())
+}
+
+model CourseBooster {
+  id        Int    @id @default(autoincrement())
+  courseId  String @unique
+  overall   Float  @default(0)
+  level     Int?
+  yearRange String @default("2017-2022")
+}
+
+model CourseListener {
+  id        Int      @id @default(autoincrement())
+  email     String?  @unique
+  phone     String?  @unique
+  subject   String
+  course    Int
   createdAt DateTime @default(now())
 }
