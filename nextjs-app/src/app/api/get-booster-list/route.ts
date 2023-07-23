@@ -1,8 +1,7 @@
 import { NextResponse } from "next/server";
-import { NextRequest } from "next/server";
 import prisma from "../../../../prisma/client";
 
-export async function GET(req: NextRequest) {
+export async function GET() {
 
     const gpaBoosters = await prisma.courseBooster.findMany({
       where: {
