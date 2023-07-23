@@ -7,9 +7,9 @@ export async function GET() {
       where: {
         level: 100,
       },
-      // orderBy: {
-      //   overall: "desc",
-      // }
+      orderBy: {
+        overall: "desc",
+      }
     });
 
   return NextResponse.json({
