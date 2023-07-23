@@ -69,9 +69,13 @@ model CourseBooster {
 
 model CourseListener {
   id        Int      @id @default(autoincrement())
-  email     String?  @unique
-  phone     String?  @unique
+  email     String?
+  phone     String?
   subject   String
   course    Int
+  section   String
   createdAt DateTime @default(now())
+  finished  Boolean  @default(false)
+
+  @@unique([email, phone, subject, course, section])
 }

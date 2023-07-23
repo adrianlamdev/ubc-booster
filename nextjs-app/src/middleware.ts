@@ -13,6 +13,7 @@ export default authMiddleware({
     "/help-and-feedback",
     "/api",
     "/api/subscribe",
+    "/api/get-booster-list",
     "/tools",
     "/tools/course-notifier",
     "/tools/gpa-boosters",

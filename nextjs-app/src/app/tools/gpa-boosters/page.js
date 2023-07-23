@@ -1,28 +1,49 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { Spacer, Table, useAsyncList } from "@nextui-org/react";
 
 export default function GpaBoosterPage() {
   const columns = [
-    { name: "Subject", uid: "name" },
-    { name: "Course", uid: "height" },
-    { name: "Overall", uid: "mass" },
+    { name: "Course ID", uid: "courseId" },
+    { name: "Overall", uid: "overall" },
+    { name: "Level", uid: "level" },
+    { name: "Year Range", uid: "yearRange" },
   ];
 
-  async function load({ signal, cursor }) {
-    // If no cursor is available, then we're loading the first page.
-    // Otherwise, the cursor is the next URL to load, as returned from the previous page.
-    const res = await fetch(
-      cursor || "https://swapi.py4e.com/api/people/?search=",
-      { signal },
-    );
-    const json = await res.json();
-    return {
-      items: json.results,
-      cursor: json.next,
-    };
-  }
-  const list = useAsyncList({ load });
+  const [loading, setLoading] = useState(true);
+  const [list, setList] = useState([]);
+
+  useEffect(() => {
+    async function load() {
+      const res = await fetch("http://localhost:3000/api/get-booster-list",
+        { method: 'GET', headers: { 'Content-Type': 'application/json' } });
+      const json = await res.json();
+      setList(json.boosters);
+      setLoading(false);
+    }
+    
+    load();
+  }, []);
+
+  useEffect(() => {
+    console.log(list); // This will log the updated state
+  }, [list]); // This effect runs whenever `list` changes
+
+  // async function load({ signal, cursor }) {
+  //   // If no cursor is available, then we're loading the first page.
+  //   // Otherwise, the cursor is the next URL to load, as returned from the previous page.
+  //   const res = await fetch(
+  //     cursor || "https://swapi.py4e.com/api/people/?search=",
+  //     { signal },
+  //   );
+  //   const json = await res.json();
+  //   return {
+  //     items: json.results,
+  //     cursor: json.next,
+  //   };
+  // }
+  // const list = useAsyncList({ load });
 
   return (
     <div className="py-32 lg:px-64 px-10">
@@ -45,19 +66,16 @@ export default function GpaBoosterPage() {
               <Table.Column key={column.uid}>{column.name}</Table.Column>
             )}
           </Table.Header>
-          <Table.Body
-            items={list.items}
-            loadingState={list.loadingState}
-            onLoadMore={list.loadMore}
-          >
-            {(item) => (
-              <Table.Row key={item.name}>
-                {(key) => <Table.Cell>{item[key]}</Table.Cell>}
-              </Table.Row>
-            )}
-          </Table.Body>
+                  <Table.Body items={list}>
+          {(item) => (
+            <Table.Row key={item.courseId}>
+              {(key) => <Table.Cell>{item[key]}</Table.Cell>}
+            </Table.Row>
+          )}
+        </Table.Body>
         </Table>
       </div>
     </div>
   );
 }
+
