@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
+import { Analytics } from '@vercel/analytics/react';
 // import DisclaimerModal from "../components/disclamer"
 
 const inter = Inter({ subsets: ["latin"] });
@@ -25,7 +26,9 @@ export default function RootLayout({
           {/* use state to toggle */}
           {/* <DisclaimerModal /> */}
           <Navbar />
-          <main>{children}</main>
+          <main>{children}
+          <Analytics />
+          </main>
           <Footer />
         </body>
       </html>
