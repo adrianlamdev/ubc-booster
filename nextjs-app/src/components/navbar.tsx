@@ -110,11 +110,11 @@ export default function NavbarComp() {
           <Navbar.Link href="/help-and-feedback">FAQ</Navbar.Link>
         </Navbar.Content>
         <Navbar.Content>
-          <Navbar.Link color="inherit" href="#">
+          <Navbar.Link color="inherit" href="/sign-in">
             Login
           </Navbar.Link>
           <Navbar.Item>
-            <Button auto flat as={Link} color="primary" href="#">
+            <Button auto flat as={Link} color="primary" href="/sign-up">
               Sign Up
             </Button>
           </Navbar.Item>
