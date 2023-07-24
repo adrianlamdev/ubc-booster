@@ -16,13 +16,15 @@ export default function GpaBoosterPage() {
 
   useEffect(() => {
     async function load() {
-      const res = await fetch("http://localhost:3000/api/get-booster-list",
-        { method: 'GET', headers: { 'Content-Type': 'application/json' } });
+      const res = await fetch("http://localhost:3000/api/get-booster-list", {
+        method: "GET",
+        headers: { "Content-Type": "application/json" },
+      });
       const json = await res.json();
       setList(json.boosters);
       setLoading(false);
     }
-    
+
     load();
   }, []);
 
@@ -66,16 +68,15 @@ export default function GpaBoosterPage() {
               <Table.Column key={column.uid}>{column.name}</Table.Column>
             )}
           </Table.Header>
-                  <Table.Body items={list}>
-          {(item) => (
-            <Table.Row key={item.courseId}>
-              {(key) => <Table.Cell>{item[key]}</Table.Cell>}
-            </Table.Row>
-          )}
-        </Table.Body>
+          <Table.Body items={list}>
+            {(item) => (
+              <Table.Row key={item.courseId}>
+                {(key) => <Table.Cell>{item[key]}</Table.Cell>}
+              </Table.Row>
+            )}
+          </Table.Body>
         </Table>
       </div>
     </div>
   );
 }
-

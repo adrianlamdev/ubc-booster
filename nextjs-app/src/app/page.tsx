@@ -57,11 +57,9 @@ export default function Home() {
             </h1>
             <Spacer y={1} />
             <p className="lg:text-lg tracking-tighter">
-            Get real-time notifications on courses, and discover GPA boosters
-            <p>
-            to take your academic performance to the next level. 
-            </p>
-            Jump in. Stay ahead. Excel with ease.
+              Get real-time notifications on courses, and discover GPA boosters
+              <p>to take your academic performance to the next level.</p>
+              Jump in. Stay ahead. Excel with ease.
             </p>
             {/* <Text h1 weight="bold" size="$6xl" className="tracking-tight">
               Your <span className="text-blue-500">UBC</span> course
@@ -114,9 +112,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div>
-        IMAGE
-      </div>
+          <div>IMAGE</div>
         </div>
       </div>
       <div className="flex items-center justify-center">
@@ -134,7 +130,7 @@ export default function Home() {
         </AnimatePresence>
       </div>
       <div className="lg:hidden">
-      <Spacer y={2} />
+        <Spacer y={2} />
       </div>
       <div className="custom-shape-divider-bottom-1689628893">
         <svg

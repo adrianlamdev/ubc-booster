@@ -5,7 +5,7 @@ import { Spacer, Card, Text } from "@nextui-org/react";
 export default function StatSection() {
   return (
     <div className="">
-        <div className="custom-shape-divider-bottom-1689628894 bg-slate-900">
+      <div className="custom-shape-divider-bottom-1689628894 bg-slate-900">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
@@ -19,76 +19,83 @@ export default function StatSection() {
         </svg>
       </div>
       <div className="py-32 lg:px-64 px-10">
-      <div className="flex flex-col">
-        <h1 className="font-bold text-3xl lg:text-5xl text-center">Did you know?</h1>
-        <Spacer y={1} />
-        <p className="lg:text-lg text-center">
-          Here's some statistics about how many GPA boosters there are at UBC.
-        </p>
-      </div>
-      <Spacer y={1} />{" "}
-      <ul className="flex flex-row justify-center ">
-        <li className="lg:mr-40">
+        <div className="flex flex-col">
+          <h1 className="font-bold text-3xl lg:text-5xl text-center">
+            Did you know?
+          </h1>
+          <Spacer y={1} />
+          <p className="lg:text-lg text-center">
+            Here's some statistics about how many GPA boosters there are at UBC.
+          </p>
+        </div>
+        <Spacer y={1} />{" "}
+        <ul className="flex flex-row justify-center ">
+          <li className="lg:mr-40">
             <h1 className="text-center font-bold text-2xl lg:text-4xl transition text-blue-500">
-                1,409
+              1,409
             </h1>
             <Spacer y={0.5} />
             <p className="text-gray-600 text-sm text-center lg:text-md">
-                Undergraduate booster courses
+              Undergraduate booster courses
             </p>
-        </li>
-        <li>
-        <h1 className="text-center font-bold text-2xl lg:text-4xl transition text-blue-500">
-                1,755 
-            </h1>
-            <Spacer y={0.5} />
-            <p className="text-gray-600 text-sm text-center lg:text-md">
-                Graduate booster courses
-            </p></li>
-      </ul>
-      <Spacer y={5} />
-      <div>
-        <h2 className="font-bold text-2xl lg:text-4xl text-center">To break it down, there are</h2>
-      <Spacer y={2} />{" "}
-        <ul className="flex flex-row justify-between lg:mx-32">
-        <li className="">
+          </li>
+          <li>
             <h1 className="text-center font-bold text-2xl lg:text-4xl transition text-blue-500">
-                109
+              1,755
             </h1>
             <Spacer y={0.5} />
             <p className="text-gray-600 text-sm text-center lg:text-md">
-                100-level courses
+              Graduate booster courses
             </p>
-        </li>
-        <li>
-        <h1 className="text-center font-bold text-2xl lg:text-4xl transition text-blue-500">
-                140
-            </h1>
-            <Spacer y={0.5} />
-            <p className="text-gray-600 text-sm text-center lg:text-md">
-                200-level courses
-            </p></li>
+          </li>
+        </ul>
+        <Spacer y={5} />
+        <div>
+          <h2 className="font-bold text-2xl lg:text-4xl text-center">
+            To break it down, there are
+          </h2>
+          <Spacer y={2} />{" "}
+          <ul className="flex flex-row justify-between lg:mx-32">
             <li className="">
-            <h1 className="text-center font-bold text-2xl lg:text-4xl transition text-blue-500">
+              <h1 className="text-center font-bold text-2xl lg:text-4xl transition text-blue-500">
+                109
+              </h1>
+              <Spacer y={0.5} />
+              <p className="text-gray-600 text-sm text-center lg:text-md">
+                100-level courses
+              </p>
+            </li>
+            <li>
+              <h1 className="text-center font-bold text-2xl lg:text-4xl transition text-blue-500">
+                140
+              </h1>
+              <Spacer y={0.5} />
+              <p className="text-gray-600 text-sm text-center lg:text-md">
+                200-level courses
+              </p>
+            </li>
+            <li className="">
+              <h1 className="text-center font-bold text-2xl lg:text-4xl transition text-blue-500">
                 431
-            </h1>
-            <Spacer y={0.5} />
-            <p className="text-gray-600 text-sm text-center lg:text-md">
+              </h1>
+              <Spacer y={0.5} />
+              <p className="text-gray-600 text-sm text-center lg:text-md">
                 300-level courses
-            </p>
-        </li>
-        <li>
-        <h1 className="text-center font-bold text-2xl lg:text-4xl transition text-blue-500">
+              </p>
+            </li>
+            <li>
+              <h1 className="text-center font-bold text-2xl lg:text-4xl transition text-blue-500">
                 729
-            </h1>
-            <Spacer y={0.5} />
-            <p className="text-gray-600 text-sm text-center lg:text-md">
+              </h1>
+              <Spacer y={0.5} />
+              <p className="text-gray-600 text-sm text-center lg:text-md">
                 400-level courses
-            </p></li>
-      </ul>
+              </p>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div className="custom-shape-divider-bottom-1689628893">
+      <div className="custom-shape-divider-bottom-1689628893">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"

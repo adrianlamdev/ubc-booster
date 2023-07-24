@@ -128,7 +128,9 @@ export default function PricingPage() {
                     d="M4.5 12.75l6 6 9-13.5"
                   />
                 </svg>
-                <p className="text-sm">Get notifications for course registration</p>
+                <p className="text-sm">
+                  Get notifications for course registration
+                </p>
               </li>
               <li className="flex flex-row items-center mt-4">
                 <svg

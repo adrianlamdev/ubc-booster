@@ -23,7 +23,7 @@ export default function RootLayout({
       <html lang="en">
         <body className={inter.className}>
           {/* use state to toggle */}
-        {/* <DisclaimerModal /> */}
+          {/* <DisclaimerModal /> */}
           <Navbar />
           <main>{children}</main>
           <Footer />
