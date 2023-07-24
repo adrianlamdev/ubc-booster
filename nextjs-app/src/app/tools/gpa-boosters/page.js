@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Spacer, Table, useAsyncList } from "@nextui-org/react";
+import { Spacer, Table, useAsyncList, Link } from "@nextui-org/react";
 
 export default function GpaBoosterPage() {
   const columns = [
@@ -56,11 +56,12 @@ export default function GpaBoosterPage() {
         <Spacer y={1} />
         <p className="lg:text-lg">Here's a list of recent GPA boosters.</p>
         <Spacer y={1} />
+        <div className="mx-20">
         <Table
           bordered
           shadow={false}
           aria-label="Example table with dynamic content & infinity pagination"
-          css={{ minWidth: "100%", height: "calc($space$14 * 10)" }}
+          css={{ height: "calc($space$14 * 10)" }}
           color="secondary"
         >
           <Table.Header columns={columns}>
@@ -70,12 +71,22 @@ export default function GpaBoosterPage() {
           </Table.Header>
           <Table.Body items={list}>
             {(item) => (
-              <Table.Row key={item.courseId}>
-                {(key) => <Table.Cell>{item[key]}</Table.Cell>}
-              </Table.Row>
+                <Table.Row key={item.courseId}>
+                    {(key) => (
+                        <Table.Cell>
+                            {key === "courseId" ? (
+                                <Link href={`/path/to/${item[key]}`}>{item[key]}</Link>
+                            ) : (
+                                item[key]
+                            )}
+                </Table.Cell>
             )}
-          </Table.Body>
+        </Table.Row>
+    )}
+</Table.Body>
         </Table>
+        </div>
+
       </div>
     </div>
   );

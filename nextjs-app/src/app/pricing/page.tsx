@@ -85,14 +85,14 @@ export default function PricingPage() {
         <li className="border-2 border-blue-500 rounded-3xl p-8 flex justify-center flex-col">
           <div>
             <div className="flex flex-row justify-between items-center">
-              <h1 className="font-semibold text-xl text-blue-500">Free</h1>
+              <h1 className="font-semibold text-xl text-blue-500">Pro</h1>
               <div className="font-semibold text-xs text-blue-500 bg-blue-200 px-2 py-1 rounded-xl">
                 most popular
               </div>
             </div>
-            <p className="mt-4">Essentials to get started.</p>
+            <p className="mt-4">Get the most out of </p>
             <h2 className="font-bold text-3xl mt-4">
-              $4
+              $3
               <span className="font-medium text-sm text-gray-600">/month</span>
             </h2>
             <ul className="mt-6">

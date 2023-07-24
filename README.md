@@ -16,3 +16,6 @@
 
 - Possible features
   - [Show course info](https://ubcexplorer.io/api)
+
+- Resources:
+  - [cUrl to Python](https://formatter.xyz/curl-to-python-converter)
